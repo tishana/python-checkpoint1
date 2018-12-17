@@ -1,14 +1,14 @@
-# #1: Define a Vehicle class with the following properties and methods: 
-# - `vehicle_type` 
+# #1: Define a Vehicle class with the following properties and methods:
+# - `vehicle_type`
 # - `wheel_count`
-# - `name` 
-# - `cost` 
-# - `colors` 
-# - `vehicle_brand` 
+# - `name`
+# - `cost`
+# - `colors`
+# - `vehicle_brand`
 # - `mpg`, a 'dict', with the following properties:
 #     - `city`
-#     - `highway` 
-#     - `combined` 
+#     - `highway`
+#     - `combined`
 # - `get_vehicle_type` should return the `vehicle_type`
 # - `get_vehicle_brand` should return the classes `vehicle_brand`
 # - `get_vehicle_drive` if the `wheel_count` for that class is "no wheels!" then
@@ -18,7 +18,29 @@
 # Your Vehicle class should take one argument (a `dict`) with the above
 # attributes. Define the properties on the class from the dict that is passed in.
 
-class Vehicle 
+
+class Vehicle:
+    def __init__(self, x):
+        self.vehicle_type = x['vehicle_type']
+        self.wheel_count = x['wheel_count']
+        self.name = x['name']
+        self.cost = x['cost']
+        self.colors = x['colors']
+        self.vehicle_brand = x['vehicle_brand']
+        self.mpg = x['mpg']
+
+    def get_vehicle_type(self):
+        print(self.vehicle_type)
+
+    def get_vehicle_brand(self):
+        print(self.vehicle_brand)
+
+    def get_vehicle_drive(self):
+        if self.wheel_count == "no wheels!":
+            print("no wheels send it back to the shop")
+        else:
+            print(f"I have {self.wheel_count}  wheel drive")
+
 
 # #2: Create a Motorcycle class that inherits from the Vehicle class and has the
 # following properties and methods:
@@ -26,18 +48,12 @@ class Vehicle
 # - method: `pop_wheelie` if `wheel_count` is not equal to 2 then it should be False,
 #       otherwise return "......pop!"
 
-
-
 # #3: Define a Car class that inherits from the vehicle class with the following attributes and methods:
 # - property: `wheel_count` defaults to 4
 # - method: `can_drive` that should return 'Vrrooooom Vroooom'
 
-
-
 # #4: Define a Truck class that inherits from the vehicle class with the following attributes and methods:
 # - property: `wheel_count` defaults to "no wheels!"
 # - method: `rev_engine` that should return 'revvvvvreeeev'
-
-
 
 # Commit when you finish working on these questions!
