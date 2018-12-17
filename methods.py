@@ -8,7 +8,7 @@
 # So if the number 5 is passed in, num_list_with_arg should return [1, 2, 3, 4]
 def num_list_with_arg(num):
     new_list = []
-    i = 0
+    i = 1
     while i < num:
         new_list.append(i)
         i += 1
